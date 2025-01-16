@@ -1,0 +1,39 @@
+# Unity generierte Dateien
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]ser[Ss]ettings/
+
+# Visual Studio Code
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# Crash Reports
+CrashReports/
+
+# Build-Ordner
+Build/
+Builds/
+
+# Exclude Unity generierte Debug-Dateien
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+
+# Dateien von Betriebssystemen
+.DS_Store
+Thumbs.db
