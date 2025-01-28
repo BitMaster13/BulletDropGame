@@ -740,7 +740,6 @@ GameObject:
   - component: {fileID: 1339847717}
   - component: {fileID: 1339847719}
   - component: {fileID: 1339847718}
-  - component: {fileID: 1339847720}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -839,20 +838,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1339847720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1339847716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8feae1a65f268f747975317f0a96ac56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pachinkoBallPrefab: {fileID: 0}
-  clickAreaCollider: {fileID: 0}
 --- !u!1001 &1375947996
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,8 +3,13 @@ using UnityEngine;
 public class DropZone : MonoBehaviour
 {
     public GameObject pachinkoBallPrefab;
-    public Collider2D clickAreaCollider;
+    private Collider2D clickAreaCollider;
 
+
+    private void Start()
+    {
+        clickAreaCollider = GetComponent<Collider2D>();
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) // Left mouse button click
