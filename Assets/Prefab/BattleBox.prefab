@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 286291407246526121}
   - component: {fileID: 6401795078498906744}
   - component: {fileID: 6995012267418590301}
-  - component: {fileID: 8339314284306417813}
+  - component: {fileID: 4238191175897956037}
   m_Layer: 0
   m_Name: BattleBox
   m_TagString: Untagged
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &8339314284306417813
+--- !u!114 &4238191175897956037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,6 +144,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480108602879098721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc28d76eb8fb8c348a6e29e252915fe0, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b438ca78780b4a388d1d670e2ca1f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleBoxData:
+    type: 0
+    value: 0
+    percent: 0

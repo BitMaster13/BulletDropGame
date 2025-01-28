@@ -22,7 +22,7 @@ public class Rune : MonoBehaviour
 
         if (other.gameObject.CompareTag("PachinkoBall"))
         {
-            pachinkoGameManager.pachinkoBallHitRune(gameObject);
+            pachinkoGameManager.runeHit(this);
         }
     }
 }

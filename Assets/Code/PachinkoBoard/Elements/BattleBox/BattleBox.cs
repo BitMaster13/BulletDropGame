@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BattleBox : MonoBehaviour
 {
+    public BattleBoxData battleBoxData;
     private PachinkoGameManager pachinkoGameManager;
 
     private void Start()
@@ -19,7 +20,7 @@ public class BattleBox : MonoBehaviour
 
         if (other.gameObject.CompareTag("PachinkoBall"))
         {
-            pachinkoGameManager.enteredBattleBox(other.gameObject);
+            pachinkoGameManager.enteredBattleBox(this, other.gameObject);
         }
     }
 }

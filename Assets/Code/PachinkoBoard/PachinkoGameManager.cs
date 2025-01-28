@@ -13,24 +13,49 @@ public class PachinkoGameManager : MonoBehaviour
         Destroy(ball);
     }
 
-    internal void pachinkoBallHitRune(GameObject gameObject)
+    internal void runeHit(Rune rune)
     {
-        RuneData runrData = gameObject.GetComponent<Rune>().runeData;
-        if(runrData != null)
+        RuneData runrData = rune.runeData;
+        if (runrData != null)
         {
             switch (runrData.type)
             {
-                case RuneData.RuneType.Attack:
-                    Debug.Log("Attack rune hit"+runrData.value);
+                case AbilityType.Attack:
+                    Debug.Log("Attack rune hit" + runrData.value);
                     break;
-                case RuneData.RuneType.Health:
-                    Debug.Log("Health rune hit"+runrData.value);
+                case AbilityType.Health:
+                    Debug.Log("Health rune hit" + runrData.value);
                     break;
-                case RuneData.RuneType.Defence:
-                    Debug.Log("Defence rune hit"+runrData.value);
+                case AbilityType.Defence:
+                    Debug.Log("Defence rune hit" + runrData.value);
                     break;
                 default:
-                    Debug.LogError("Unknown rune type", gameObject);
+                    Debug.LogError("Unknown AbilityType" + runrData.type);
+                    break;
+            }
+        }
+    }
+
+    internal void enteredBattleBox(BattleBox battleBox, GameObject pachinkoBall)
+    {
+        DestroyPachinkoBall(pachinkoBall);
+        BattleBoxData battleBoxData = battleBox.battleBoxData;
+
+        if (battleBoxData != null)
+        {
+            switch (battleBoxData.type)
+            {
+                case AbilityType.Attack:
+                    Debug.Log("Attack box hit" + battleBoxData.value);
+                    break;
+                case AbilityType.Health:
+                    Debug.Log("Health box hit" + battleBoxData.value);
+                    break;
+                case AbilityType.Defence:
+                    Debug.Log("Defence box hit" + battleBoxData.value);
+                    break;
+                default:
+                    Debug.LogError("UnknownAbilityType" + battleBoxData.type);
                     break;
             }
         }
