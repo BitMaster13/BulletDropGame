@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DropZone : MonoBehaviour
 {
- public GameObject pachinkoBallPrefab;
+    public GameObject pachinkoBallPrefab;
     public Collider2D clickAreaCollider;
 
     void Update()
@@ -13,6 +13,10 @@ public class DropZone : MonoBehaviour
             if (clickAreaCollider.OverlapPoint(mousePosition))
             {
                 SpawnPachinkoBall(mousePosition);
+            }
+            else
+            {
+                Debug.LogError("Pachinko clickAreaCollider not assigned in Dropzone!");
             }
         }
     }
@@ -28,7 +32,7 @@ public class DropZone : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Pachinko Ball Prefab not assigned in PachinkoGameManager!");
+            Debug.LogError("Pachinko Ball Prefab not assigned in Dropzone!");
         }
     }
 }

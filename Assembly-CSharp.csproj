@@ -66,9 +66,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Code\GameManager.cs" />
-    <Compile Include="Assets\Code\PachinkoBoard\DropZone.cs" />
+    <Compile Include="Assets\Code\PachinkoBoard\Elements\RuneShape.cs" />
+    <Compile Include="Assets\Code\PachinkoBoard\Elements\RuneData.cs" />
+    <Compile Include="Assets\Code\PachinkoBoard\Elements\BattleBox.cs" />
+    <Compile Include="Assets\Code\PachinkoBoard\Elements\DropZone.cs" />
+    <Compile Include="Assets\Code\PachinkoBoard\Elements\Rune.cs" />
     <Compile Include="Assets\Code\PachinkoBoard\PachinkoGameManager.cs" />
-    <Compile Include="Assets\Code\PachinkoBoard\BattleBox.cs" />
+    <Compile Include="Assets\Code\PachinkoBoard\Elements\RuneType.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
