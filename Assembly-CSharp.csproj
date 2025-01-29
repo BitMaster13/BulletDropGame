@@ -67,10 +67,13 @@
   <ItemGroup>
     <Compile Include="Assets/Code/PachinkoBoard/Elements/AbilityType.cs" />
     <Compile Include="Assets/Code/GameManager.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/DragAndDrop/Draggable2d.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneShape.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneData.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/DragAndDrop/DropTarget2D.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/DropZone.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/BattleBox/BattleBoxData.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneDropSlot.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/Rune.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/PachinkoGameManager.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneType.cs" />

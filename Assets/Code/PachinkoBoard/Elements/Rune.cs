@@ -4,7 +4,7 @@ using UnityEngine;
 public class Rune : MonoBehaviour
 {
     [SerializeField]
-    RuneShape shape;
+    public RuneShape shape;
     private PachinkoGameManager pachinkoGameManager;
     public RuneData runeData;
 

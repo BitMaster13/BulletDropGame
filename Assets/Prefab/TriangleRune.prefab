@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3697052649376391113}
   - component: {fileID: 2461010373529778053}
   - component: {fileID: 706000120751878393}
+  - component: {fileID: 5827919976277290060}
   m_Layer: 0
   m_Name: TriangleRune
   m_TagString: Untagged
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -156,3 +157,15 @@ MonoBehaviour:
     type: 0
     value: 1
     percent: 0
+--- !u!114 &5827919976277290060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087481085163152136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b199fb6b5194b41ad4fc6bc4d804f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
