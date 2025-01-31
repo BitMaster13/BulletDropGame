@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DropZone : MonoBehaviour
+public class StartZone : MonoBehaviour
 {
     public GameObject pachinkoBallPrefab;
     private Collider2D clickAreaCollider;

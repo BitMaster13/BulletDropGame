@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class RuneDropSlot : DropTarget2D
-{
+/*ublic class RuneDropSlot 
     [SerializeField]
     RuneShape slotShape;
 
@@ -26,4 +25,4 @@ public class RuneDropSlot : DropTarget2D
             droppedObject.transform.position = droppedObject.GetComponent<Draggable2D>().startPosition;
         }
     }
-}
+}*/

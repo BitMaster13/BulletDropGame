@@ -1,42 +1,86 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Draggable2D : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class Draggable2D : MonoBehaviour
 {
-    public static GameObject draggedObject;
-    public Vector3 startPosition;
-    private Transform startParent;
-    private Camera mainCamera;
-    private SpriteRenderer spriteRenderer;
+
+    private bool isDragging = false;
+    private Vector3 offset;
+    private float originalZ;
+    private Vector3 originalPosition;
+
+    [SerializeField]
+    Collider2D draggableCollider;
 
     private void Start()
     {
-        mainCamera = Camera.main; // Get the main camera automatically
-        spriteRenderer = GetComponent<SpriteRenderer>(); // Get the SpriteRenderer
+        originalZ = transform.position.z;
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    private void OnMouseDown()
     {
-        Debug.Log("OnBeginDrag called on: " + gameObject.name);
-        draggedObject = gameObject;
-        startPosition = transform.position;
-        startParent = transform.parent;
-
-        // Optional: Visual feedback
-        spriteRenderer.color = new Color(1f, 1f, 1f, 0.7f); // Make it slightly transparent
+        // Record the difference between the mouse position and the object's position
+        offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, originalZ));
+        isDragging = true;
+        originalPosition = transform.position;
     }
 
-    public void OnDrag(PointerEventData eventData)
+    private void OnMouseUp()
     {
-        // Convert mouse position to world space for 2D
-        Vector3 screenPoint = eventData.position;
-        screenPoint.z = -mainCamera.transform.position.z; // Distance from camera to the sprite plane
-        transform.position = mainCamera.ScreenToWorldPoint(screenPoint);
+        isDragging = false;
+        print("OnMouseUp");
+        draggableCollider.enabled = false; // Disable the collider to prevent raycast hits on the same object
+
+        // Check for valid drop zones using raycasts
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+        draggableCollider.enabled = true; // Re-enable the collider after raycast checks
+        
+        if (hit.collider != null)
+        {
+            print("Hit: " + hit.collider.name);
+            DropTarget2D dropTarget = hit.collider.GetComponent<DropTarget2D>();
+            if (dropTarget != null)
+            {
+                print("DropTarget found");
+                if (!dropTarget.IsOccupied)
+                {
+                    print("DropTarget is not occupied");
+                    // Snap to the drop zone
+                    transform.position = new Vector3(hit.collider.transform.position.x, hit.collider.transform.position.y, originalZ);
+                    dropTarget.SetOccupied(true, this);
+                }
+                else
+                {
+                    print("DropTarget is occupied");
+                    ReturnToOriginalPosition(); // Return if the slot is occupied
+                }
+            }
+            else
+            {
+                print("DropTarget not found");
+                ReturnToOriginalPosition(); // Return if not dropped on a valid zone
+            }
+        }
+        else
+        {
+            print("No hit");
+            ReturnToOriginalPosition(); // Return if not dropped on anything
+        }
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    private void OnMouseDrag()
     {
-        // Optional: Reset visual changes
-        spriteRenderer.color = Color.white;
+        if (isDragging)
+        {
+            Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, originalZ);
+            transform.position = Camera.main.ScreenToWorldPoint(newPosition) + offset;
+        }
+    }
+
+    private void ReturnToOriginalPosition()
+    {
+        transform.position = originalPosition;
+        // You might want to add a smooth animation here using Vector3.Lerp or a tweening library
     }
 }

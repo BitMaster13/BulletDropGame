@@ -1,20 +1,11 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
+public class DropTarget2D : MonoBehaviour {
+    public bool IsOccupied { get; private set; }
+    public Draggable2D OccupyingObject { get; private set; }
 
-public abstract class DropTarget2D : MonoBehaviour, IDropHandler
-{
-    public virtual void OnDrop(PointerEventData eventData)
+    public void SetOccupied(bool occupied, Draggable2D occupyingObject = null)
     {
-        Debug.Log("OnDrop called on DropTarget2D: " + gameObject.name);
-        Debug.Log("Draggable2D.draggedObject: " + Draggable2D.draggedObject);
-        if (Draggable2D.draggedObject == null){
-            Debug.LogError("No object being dragged!");
-            return;
-        }
-
-        // Call the abstract method
-        HandleDrop(Draggable2D.draggedObject);
+        IsOccupied = occupied;
+        OccupyingObject = occupyingObject;
     }
-
-    protected abstract void HandleDrop(GameObject droppedObject);
 }
