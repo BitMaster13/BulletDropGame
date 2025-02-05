@@ -25,19 +25,25 @@ public class RuneDropSlot : MonoBehaviour {
         IsOccupied = occupied;
         rune = dropedRune;
         rune.lockRune();
+        spriteRenderer.color = originalColor;
     }
 
-    public bool CanAcceptRune(DraggableRune rune)
+    public bool CanAcceptRune(DraggableRune draggableRune)
     {
-        return !IsOccupied && (rune.shape == suppoertedShapes);
+        return !IsOccupied && (draggableRune.shape == suppoertedShapes);
     }
 
-    public void OnRuneHover(DraggableRune rune)
+    public void OnRuneHover(DraggableRune draggableRune)
     {
-        if (CanAcceptRune(rune))
+        if (IsOccupied)
+        {
+            return;
+        }
+        
+        if (CanAcceptRune(draggableRune))
         {
             spriteRenderer.color = acceptColor;
-        } else{
+        } else {
             spriteRenderer.color = rejectColor;
         }
     }

@@ -10,20 +10,10 @@ public class StartZone : MonoBehaviour
     {
         clickAreaCollider = GetComponent<Collider2D>();
     }
-    void Update()
+    private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0)) // Left mouse button click
-        {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (clickAreaCollider.OverlapPoint(mousePosition))
-            {
-                SpawnPachinkoBall(mousePosition);
-            }
-            else
-            {
-                Debug.LogError("Pachinko clickAreaCollider not assigned in Dropzone!");
-            }
-        }
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        SpawnPachinkoBall(mousePosition);
     }
 
     void SpawnPachinkoBall(Vector3 position)

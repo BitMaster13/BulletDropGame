@@ -152,3 +152,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suppoertedShapes: 1
+  spriteRenderer: {fileID: 1175560997766082856}
+  acceptColor: {r: 0.17061657, g: 1, b: 0.015686274, a: 1}
+  rejectColor: {r: 1, g: 0.015686274, b: 0.07173693, a: 1}
