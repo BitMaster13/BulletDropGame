@@ -13,7 +13,7 @@ public class PachinkoGameManager : MonoBehaviour
         Destroy(ball);
     }
 
-    internal void runeHit(Rune rune)
+    internal void runeHit(DraggableRune rune)
     {
         RuneData runrData = rune.runeData;
         if (runrData != null)

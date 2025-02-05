@@ -1,28 +1,21 @@
 using UnityEngine;
-
-/*ublic class RuneDropSlot 
+public class RuneDropSlot : MonoBehaviour {
+     
     [SerializeField]
-    RuneShape slotShape;
+    RuneShape suppoertedShapes;
+    public bool IsOccupied { get; private set; }
+    public DraggableRune rune { get; private set; }
 
-    protected override void HandleDrop(GameObject droppedObject)
+    public void SetOccupied(bool occupied, DraggableRune dropedRune = null)
     {
-        Debug.Log("HandleDrop in RuneDropSlot");
+        IsOccupied = occupied;
+        rune = dropedRune;
+        rune.lockRune();
 
-        Rune rune = droppedObject.GetComponent<Rune>();
-
-        if (rune != null && rune.shape == slotShape)
-        {
-            Debug.Log("Item equipped to " + slotShape);
-
-            // Put the item on the target.
-            droppedObject.transform.localPosition = Vector3.zero;
-        }
-        else
-        {
-            Debug.Log("Invalid item for this slot!");
-            // Snap back (optional)
-            droppedObject.transform.SetParent(null);
-            droppedObject.transform.position = droppedObject.GetComponent<Draggable2D>().startPosition;
-        }
     }
-}*/
+
+    public bool CanAcceptRune(DraggableRune rune)
+    {
+        return !IsOccupied && (rune.shape == suppoertedShapes);
+    }
+}
