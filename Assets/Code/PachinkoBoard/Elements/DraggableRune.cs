@@ -16,6 +16,7 @@ public class DraggableRune : MonoBehaviour
 
     [SerializeField]
     Collider2D draggableCollider;
+    private RuneDropSlot currentHoveredSlot;
 
     private void Start()
     {
@@ -27,13 +28,6 @@ public class DraggableRune : MonoBehaviour
         originalZ = transform.position.z;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("PachinkoBall"))
-        {
-            pachinkoGameManager.runeHit(this);
-        }
-    }
 
     private void OnMouseDown()
     {
@@ -103,6 +97,31 @@ public class DraggableRune : MonoBehaviour
         {
             Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, originalZ);
             transform.position = Camera.main.ScreenToWorldPoint(newPosition) + offset;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        RuneDropSlot slot = other.GetComponent<RuneDropSlot>();
+        if (slot != null)
+        {
+            currentHoveredSlot = slot;
+            slot.OnRuneHover(this);
+        }
+        
+        if (other.gameObject.CompareTag("PachinkoBall"))
+        {
+            pachinkoGameManager.runeHit(this);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        RuneDropSlot slot = other.GetComponent<RuneDropSlot>();
+        if (slot != null && slot == currentHoveredSlot)
+        {
+            slot.OnRuneExit();
+            currentHoveredSlot = null;
         }
     }
 
