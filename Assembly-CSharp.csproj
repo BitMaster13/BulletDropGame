@@ -75,6 +75,7 @@
     <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneDropSlot.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/PachinkoGameManager.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneType.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Elements/PinReaction.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/BattleBox/BattleBox.cs" />
   </ItemGroup>
   <ItemGroup>

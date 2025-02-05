@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 355921763324730296}
   - component: {fileID: 7185631645146215688}
   - component: {fileID: 8659905167718149560}
+  - component: {fileID: 6712102452631636853}
   m_Layer: 0
   m_Name: WeakBouncePin
   m_TagString: Untagged
@@ -124,3 +125,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &6712102452631636853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5468154175607686681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db5e2fd3577c4463b72b67811104181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0.2
+  shakeMagnitude: 0.5
+  shakeSpeed: 20
