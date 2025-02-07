@@ -8,6 +8,7 @@ public partial class Rune: ScriptableObject
     public string description;
     public Sprite runeSprite;
 
-    [SerializeReference]   
+    [SerializeReference] 
+
     public IRuneAction action;
 }

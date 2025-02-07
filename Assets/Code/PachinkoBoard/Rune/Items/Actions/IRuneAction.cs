@@ -1,5 +1,4 @@
-[System.Serializable]
-public abstract class IRuneAction
+public interface IRuneAction
 {
     public abstract void  ExecuteAction(PachinkoGameManager pachinkoGameManager);
 }

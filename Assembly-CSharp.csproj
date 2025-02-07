@@ -1333,11 +1333,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj" />
-    <ProjectReference Include="SRDemo-Editor.csproj" />
-    <ProjectReference Include="SREditor.csproj" />
-    <ProjectReference Include="SREditor-Editor.csproj" />
-    <ProjectReference Include="SRDemo.csproj" />
-    <ProjectReference Include="NewTest.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

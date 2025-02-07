@@ -2,7 +2,7 @@
 public class DamageRuneAction : IRuneAction
 {
     public int damageAmount = 1;
-    public override void ExecuteAction(PachinkoGameManager pachinkoGameManager)
+    public void ExecuteAction(PachinkoGameManager pachinkoGameManager)
     {
         pachinkoGameManager.MakeDamage(damageAmount);
     }
