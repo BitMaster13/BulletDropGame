@@ -15,10 +15,13 @@ public class PachinkoGameManager : MonoBehaviour
 
     internal void runeHit(GameObject runeGO)
     {
-        Rune rune = runeGO.GetComponent<Rune>();
-        if (rune != null)
+        Rune rune = runeGO.GetComponent<DraggableRune>().runeData;
+        if (rune != null && rune.action != null) 
         {
             rune.action.ExecuteAction(this);
+        }else
+        {
+            Debug.LogError("Rune or RuneAction is null");
         }
     }
 
