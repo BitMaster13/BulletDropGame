@@ -19,7 +19,7 @@
     <RootNamespace></RootNamespace>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -54,7 +54,7 @@
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
     <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>GamePlugins:3</UnityProjectType>
     <UnityBuildTarget>StandaloneOSX:2</UnityBuildTarget>
     <UnityVersion>6000.0.30f1</UnityVersion>
   </PropertyGroup>
@@ -65,18 +65,19 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.30f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/AbilityType.cs" />
-    <Compile Include="Assets/Code/GameManager.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/DraggableRune.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneShape.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneData.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/BounceOnCollision.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/StartZone.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/BattleBox/BattleBoxData.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneDropSlot.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/PachinkoGameManager.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneType.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/BattleBox/BattleBox.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets/Plugins/Demigiant/DOTween/DOTween.XML" />
+    <None Include="Assets/Plugins/Demigiant/DOTween/DOTween.dll" />
+    <None Include="Assets/Plugins/Demigiant/DOTween/readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1329,7 +1330,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>
