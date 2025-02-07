@@ -67,15 +67,18 @@
   <ItemGroup>
     <Compile Include="Assets/Code/PachinkoBoard/Elements/AbilityType.cs" />
     <Compile Include="Assets/Code/GameManager.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/DraggableRune.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneShape.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneData.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/RuneShape.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/BounceOnCollision.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/StartZone.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/BattleBox/BattleBoxData.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneDropSlot.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/RuneType.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/Actions/DamageRuneAction.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/Rune.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/PachinkoGameManager.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneType.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/Actions/IRuneAction.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/Actions/EmptyRuneAction.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/DraggableRune.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/BattleBox/BattleBox.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -551,16 +554,16 @@
       <HintPath>Library/PackageCache/com.unity.ext.nunit/net40/unity-custom/nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library/PackageCache/com.unity.nuget.mono-cecil/Mono.Cecil.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">
@@ -1330,6 +1333,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj" />
+    <ProjectReference Include="SRDemo-Editor.csproj" />
+    <ProjectReference Include="SREditor.csproj" />
+    <ProjectReference Include="SREditor-Editor.csproj" />
+    <ProjectReference Include="SRDemo.csproj" />
+    <ProjectReference Include="NewTest.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

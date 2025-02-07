@@ -1,4 +1,4 @@
-public partial class RuneData
+public partial class Rune
 {
     public enum RuneType { Attack, Health, Defence }
 }

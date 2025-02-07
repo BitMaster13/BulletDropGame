@@ -5,9 +5,8 @@ using UnityEngine;
 public class DraggableRune : MonoBehaviour
 {
     [SerializeField]
-    public RuneShape shape;
+    public Rune runeData;
     private PachinkoGameManager pachinkoGameManager;
-    public RuneData runeData;
     private bool isDragging = false;
     private bool isLocked = false;
     private Vector3 offset;
@@ -96,7 +95,7 @@ public class DraggableRune : MonoBehaviour
         
         if (other.gameObject.CompareTag("PachinkoBall"))
         {
-            pachinkoGameManager.runeHit(this);
+            pachinkoGameManager.runeHit(gameObject);
         }
     }
 

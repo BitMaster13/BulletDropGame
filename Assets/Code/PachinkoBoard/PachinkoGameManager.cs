@@ -13,26 +13,12 @@ public class PachinkoGameManager : MonoBehaviour
         Destroy(ball);
     }
 
-    internal void runeHit(DraggableRune rune)
+    internal void runeHit(GameObject runeGO)
     {
-        RuneData runrData = rune.runeData;
-        if (runrData != null)
+        Rune rune = runeGO.GetComponent<Rune>();
+        if (rune != null)
         {
-            switch (runrData.type)
-            {
-                case AbilityType.Attack:
-                    Debug.Log("Attack rune hit" + runrData.value);
-                    break;
-                case AbilityType.Health:
-                    Debug.Log("Health rune hit" + runrData.value);
-                    break;
-                case AbilityType.Defence:
-                    Debug.Log("Defence rune hit" + runrData.value);
-                    break;
-                default:
-                    Debug.LogError("Unknown AbilityType" + runrData.type);
-                    break;
-            }
+            rune.action.ExecuteAction(this);
         }
     }
 
@@ -59,5 +45,10 @@ public class PachinkoGameManager : MonoBehaviour
                     break;
             }
         }
+    }
+
+    internal void MakeDamage(int damageAmount)
+    {
+        Debug.LogError("MakeDamage" + damageAmount);
     }
 }

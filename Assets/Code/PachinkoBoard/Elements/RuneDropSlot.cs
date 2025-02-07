@@ -30,7 +30,7 @@ public class RuneDropSlot : MonoBehaviour {
 
     public bool CanAcceptRune(DraggableRune draggableRune)
     {
-        return !IsOccupied && (draggableRune.shape == suppoertedShapes);
+        return !IsOccupied && (draggableRune.runeData.runeShape == suppoertedShapes);
     }
 
     public void OnRuneHover(DraggableRune draggableRune)

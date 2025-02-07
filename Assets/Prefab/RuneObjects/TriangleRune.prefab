@@ -152,11 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d366fbc1025b4d49b646376bb0f234b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shape: 1
-  runeData:
-    type: 0
-    value: 1
-    percent: 0
+  runeData: {fileID: 11400000, guid: d626713808bdb40ca91220f617c46269, type: 2}
   draggableCollider: {fileID: 2461010373529778053}
 --- !u!50 &6105225069050577510
 Rigidbody2D:
