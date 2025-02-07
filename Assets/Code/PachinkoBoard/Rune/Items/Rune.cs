@@ -1,14 +1,14 @@
+using SerializeReferenceEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Rune", menuName = "Runes/Rune")]
-public partial class Rune: ScriptableObject
+public partial class Rune : ScriptableObject
 {
     public RuneShape runeShape;
     public string runeName;
     public string description;
     public Sprite runeSprite;
 
-    [SerializeReference] 
-
+    [SerializeReference, SR]
     public IRuneAction action;
 }

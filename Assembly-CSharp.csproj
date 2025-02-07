@@ -77,7 +77,6 @@
     <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/Rune.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/PachinkoGameManager.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/Actions/IRuneAction.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/Actions/EmptyRuneAction.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Rune/DraggableRune.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/BattleBox/BattleBox.cs" />
   </ItemGroup>
@@ -1333,6 +1332,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj" />
+    <ProjectReference Include="SRDemo-Editor.csproj" />
+    <ProjectReference Include="SREditor.csproj" />
+    <ProjectReference Include="SREditor-Editor.csproj" />
+    <ProjectReference Include="SRDemo.csproj" />
+    <ProjectReference Include="NewTest.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>
