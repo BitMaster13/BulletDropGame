@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7d86fa5092d19e42a9a05aad0d5ccd9, type: 3}
-  m_Name: DamageRune
+  m_Name: DamageRuneSmall
   m_EditorClassIdentifier: 
   runeShape: 1
-  runeName: 'test '
-  description: test
+  runeName: Puff Damage
+  description: Makes verly small Damege
   runeSprite: {fileID: 0}
   action:
     rid: 869724865549304073
@@ -24,4 +24,4 @@ MonoBehaviour:
     - rid: 869724865549304073
       type: {class: DamageRuneAction, ns: , asm: Assembly-CSharp}
       data:
-        damageAmount: 1
+        damageAmount: 2

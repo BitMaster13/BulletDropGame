@@ -59,7 +59,7 @@
     <UnityVersion>6000.0.30f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/Users/marcel.sachse/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.5/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Users/marcel.sachse/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.0/Analyzers/Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.30f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.30f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.30f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
@@ -72,6 +72,7 @@
     <Compile Include="Assets/Code/PachinkoBoard/Elements/StartZone.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/BattleBox/BattleBoxData.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneDropSlot.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/RuneSelectionManager.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Rune/RuneType.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/Actions/DamageRuneAction.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/Rune.cs" />

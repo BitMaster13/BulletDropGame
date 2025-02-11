@@ -604,6 +604,7 @@ Transform:
   - {fileID: 1597487197}
   - {fileID: 1199996257}
   - {fileID: 1263229129}
+  - {fileID: 8394928431483636596}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1597487197 stripped
@@ -953,6 +954,68 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fb671031a8154c1da225375986a89eb, type: 3}
+--- !u!1001 &8394928431483636595
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1495643300}
+    m_Modifications:
+    - target: {fileID: 591753397546399154, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591753397546399154, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591753397546399154, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591753397546399154, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 591753397546399154, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591753397546399154, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591753397546399154, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591753397546399154, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591753397546399154, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591753397546399154, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6528759415526607490, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+      propertyPath: m_Name
+      value: RuneSelectionManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+--- !u!4 &8394928431483636596 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 591753397546399154, guid: 2741f26b2a3934486a2d0632405d6f57, type: 3}
+  m_PrefabInstance: {fileID: 8394928431483636595}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8687379301080487649
 PrefabInstance:
   m_ObjectHideFlags: 0
