@@ -1,19 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RuneSelectionManager : MonoBehaviour
+public class RuneSelector : MonoBehaviour
 {
-    public List<Rune> baseRunePool = new List<Rune>(); // Initial pool of all runes (Filled in Editor - can have duplicates)
+    public  List<RuneCountItem> baseRunePool = new List<RuneCountItem>(); // Initial pool of all runes (Filled in Editor - can have duplicates)
     private List<Rune> currentRunePool; // Pool that changes during the game session
     public int runesToOffer = 3; // Number of runes to offer the player to choose from
 
-    void Start()
-    {
-        currentRunePool = new List<Rune>(baseRunePool); // Copy base pool to current pool for each game session
+    void Awake() {
+        InitRunePool(); // Initialize the current rune pool
         Debug.LogWarning("First round of rune selection: ------------------- "+currentRunePool.Count);
         StartRuneSelectionRound(); // Start the rune selection round
         Debug.LogWarning("Example: Player chose a rune and removed it from the pool. Starting another round: -------------------");
-        RemoveRuneFromPool(baseRunePool[0]); // Example of removing a rune from the base pool
+        RemoveRuneFromPool(baseRunePool[0].rune); // Example of removing a rune from the base pool
         Debug.LogWarning("Second round of rune selection: ------------------- "+currentRunePool.Count);
         StartRuneSelectionRound(); // Start another rune selection round
     }
@@ -66,9 +65,17 @@ public class RuneSelectionManager : MonoBehaviour
     }
 
     // Function to reset the current rune pool to the base pool (for starting a new round/session) (No changes needed here)
-    public void ResetRunePool()
+    public void InitRunePool()
     {
-        currentRunePool = new List<Rune>(baseRunePool);
+        List<Rune> allRunes = new List<Rune>();
+        foreach (RuneCountItem runeEntry in baseRunePool)
+        {
+            for (int i = 0; i < runeEntry.count; i++)
+            {
+                allRunes.Add(runeEntry.rune);
+            }
+        }
+        currentRunePool = allRunes;
     }
 
     // Example function to get runes for the player to choose from (you would call this when you need to offer runes to the player) (No changes needed here)

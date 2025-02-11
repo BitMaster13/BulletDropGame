@@ -66,19 +66,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Code/PachinkoBoard/Elements/AbilityType.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/helper/BounceOnCollision.cs" />
     <Compile Include="Assets/Code/GameManager.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Rune/RuneShape.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Elements/BounceOnCollision.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/selection/RuneItemUI.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/StartZone.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/BattleBox/BattleBoxData.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/RuneDropSlot.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Rune/RuneSelectionManager.cs" />
-    <Compile Include="Assets/Code/PachinkoBoard/Rune/RuneType.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/RuneType.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/Actions/DamageRuneAction.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/selection/RuneCountItem.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/Rune.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/PachinkoGameManager.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/Actions/IRuneAction.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Rune/DraggableRune.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/selection/RuneSelectionUI.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/selection/RuneSelector.cs" />
+    <Compile Include="Assets/Code/PachinkoBoard/Rune/Items/RuneShape.cs" />
     <Compile Include="Assets/Code/PachinkoBoard/Elements/BattleBox/BattleBox.cs" />
   </ItemGroup>
   <ItemGroup>
