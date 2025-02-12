@@ -9,33 +9,21 @@ public class RuneSelector : MonoBehaviour
 
     void Awake() {
         InitRunePool(); // Initialize the current rune pool
-        Debug.LogWarning("First round of rune selection: ------------------- "+currentRunePool.Count);
-        StartRuneSelectionRound(); // Start the rune selection round
-        Debug.LogWarning("Example: Player chose a rune and removed it from the pool. Starting another round: -------------------");
-        RemoveRuneFromPool(baseRunePool[0].rune); // Example of removing a rune from the base pool
-        Debug.LogWarning("Second round of rune selection: ------------------- "+currentRunePool.Count);
-        StartRuneSelectionRound(); // Start another rune selection round
     }
 
-    public List<Rune> GetRandomRunes(List<Rune> runeSourcePool, int count)
+    public List<Rune> GetRandomRunes()
     {
-        if (runeSourcePool == null || runeSourcePool.Count == 0)
+        if (currentRunePool == null || currentRunePool.Count == 0)
         {
             Debug.LogWarning("Rune pool is empty or null.");
             return new List<Rune>(); // Return empty list if pool is empty
         }
 
-        if (count > runeSourcePool.Count)
-        {
-            Debug.LogWarning("Requested rune count exceeds the pool size. Returning all available unique runes.");
-            count = runeSourcePool.Count; // Adjust count if it's more than available runes
-        }
-
         List<Rune> randomRunes = new List<Rune>();
         HashSet<Rune> selectedRunes = new HashSet<Rune>(); // Use a HashSet to track unique runes
-        List<Rune> poolCopy = new List<Rune>(runeSourcePool);
+        List<Rune> poolCopy = new List<Rune>(currentRunePool);
 
-        while (randomRunes.Count < count && poolCopy.Count > 0)
+        while (randomRunes.Count < runesToOffer && poolCopy.Count > 0)
         {
             int randomIndex = Random.Range(0, poolCopy.Count);
             Rune selectedRune = poolCopy[randomIndex];
@@ -76,45 +64,5 @@ public class RuneSelector : MonoBehaviour
             }
         }
         currentRunePool = allRunes;
-    }
-
-    // Example function to get runes for the player to choose from (you would call this when you need to offer runes to the player) (No changes needed here)
-    public List<Rune> OfferRunesToPlayer()
-    {
-        List<Rune> offeredRunes = GetRandomRunes(currentRunePool, runesToOffer);
-        return offeredRunes;
-    }
-
-    // Example function to handle player choosing a rune (No changes needed here)
-    public void PlayerChoseRune(Rune chosenRune)
-    {
-        // Apply the effect of the chosenRune in your game logic here
-        Debug.Log("Player chose rune: " + chosenRune.runeName + ". Effect: " + chosenRune.description);
-
-        RemoveRuneFromPool(chosenRune); // Remove the chosen rune from the current pool for this session
-        // If you want permanent removal, you would modify the baseRunePool as well, or have a separate "owned runes" system.
-    }
-
-    public void DisplayOfferedRunes(List<Rune> offeredRunes)
-    {
-        // Get UI elements to display rune options (e.g., Buttons)
-        // For each rune in offeredRunes:
-        //   - Create a UI Button or use existing ones
-        //   - Set the button's image to rune.runeImage
-        //   - Set the button's text to rune.runeName
-        //   - Attach an event listener to the button that calls PlayerChoseRune(rune) when clicked
-
-        Debug.Log("Displaying offered runes in UI (UI code needs to be implemented):");
-        foreach (Rune rune in offeredRunes)
-        {
-            Debug.Log("- " + rune.runeName + ": " + rune.description);
-        }
-    }
-
-    // Example of how to use the system in your game logic: (No changes needed here)
-    public void StartRuneSelectionRound()
-    {
-        List<Rune> runesToOffer = OfferRunesToPlayer();
-        DisplayOfferedRunes(runesToOffer); // Display runes in UI for player to choose
     }
 }

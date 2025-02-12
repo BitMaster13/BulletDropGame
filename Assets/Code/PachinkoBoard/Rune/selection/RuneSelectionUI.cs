@@ -1,18 +1,18 @@
 using UnityEngine;
-    using UnityEngine.UI;
-    using System.Collections.Generic;
-    using TMPro;
+using UnityEngine.UI;
+using System.Collections.Generic;
+using TMPro;
 
 public class RuneSelectorUI : MonoBehaviour
 {
     public GameObject runeItemUIPrefab;
-        public Transform runeContainer;    
-          public RuneSelector runeSelector;      
+    public Transform runeContainer;
+    public RuneSelector runeSelector;
     private void Start()
     {
-        HideUI();
+        ShowRunes(runeSelector.GetRandomRunes());
     }
-     public void HideUI()
+    public void HideUI()
     {
         // Disable the main UI panel to hide it
         gameObject.SetActive(false);
@@ -25,7 +25,7 @@ public class RuneSelectorUI : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-         // Instantiate rune cards
+        // Instantiate rune cards
         foreach (Rune rune in runes)
         {
             GameObject cardGO = Instantiate(runeItemUIPrefab, runeContainer);
