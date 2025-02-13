@@ -5,8 +5,10 @@ using TMPro;
 
 public class RuneSelectorUI : MonoBehaviour
 {
-    public GameObject runeItemUIPrefab;
-    public Transform runeContainer;
+    public RuneItemUI runeItemOne;
+    public RuneItemUI runeItemTwo;
+    public RuneItemUI runeItemThree;
+    
     public RuneSelector runeSelector;
     private void Start()
     {
@@ -20,18 +22,37 @@ public class RuneSelectorUI : MonoBehaviour
     public void ShowRunes(List<Rune> runes)
     {
         gameObject.SetActive(true);
-        // Clear any existing cards
-        foreach (Transform child in runeContainer)
+
+        if (runes[0] != null)
         {
-            Destroy(child.gameObject);
+            runeItemOne.gameObject.SetActive(true);
+            runeItemOne.DisplayRune(runes[0], this);
         }
-        // Instantiate rune cards
-        foreach (Rune rune in runes)
+        else
         {
-            GameObject cardGO = Instantiate(runeItemUIPrefab, runeContainer);
-            RuneItemUI runeItemUI = cardGO.GetComponent<RuneItemUI>(); // (See below)
-            runeItemUI.DisplayRune(rune, this); // Pass 'this' (the UI manager)
+            runeItemOne.gameObject.SetActive(false);
         }
+
+        if (runes[1] != null)
+        {
+            runeItemTwo.gameObject.SetActive(true);
+            runeItemTwo.DisplayRune(runes[1], this);
+        }
+        else
+        {
+            runeItemTwo.gameObject.SetActive(false);
+        }
+
+        if (runes[2] != null)
+        {
+            runeItemThree.gameObject.SetActive(true);
+            runeItemThree.DisplayRune(runes[2], this);
+        }
+        else
+        {
+            runeItemThree.gameObject.SetActive(false);
+        }
+
     }
 
     public void OnRuneSelected(Rune selectedRune)
