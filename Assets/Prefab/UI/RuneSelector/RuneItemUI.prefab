@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6857300587593755105}
   - component: {fileID: 4210412354758424124}
   - component: {fileID: 8343620062097848003}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: RuneItemUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 535552798504978409}
   - component: {fileID: 281207872396939211}
   - component: {fileID: 2021190132739706256}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 4277309504229999010}
   - component: {fileID: 2353879049935005671}
   - component: {fileID: 2083389742163343552}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: RuneImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 2598360506688083940}
   - component: {fileID: 733091113165299583}
   - component: {fileID: 7042658088219350227}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}

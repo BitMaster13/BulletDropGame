@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2461010373529778053}
   - component: {fileID: 706000120751878393}
   - component: {fileID: 6105225069050577510}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TriangleRune
   m_TagString: Untagged
   m_Icon: {fileID: 0}

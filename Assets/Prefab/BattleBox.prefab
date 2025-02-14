@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6401795078498906744}
   - component: {fileID: 6995012267418590301}
   - component: {fileID: 4238191175897956037}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BattleBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

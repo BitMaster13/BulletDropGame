@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1827426909939328340}
   - component: {fileID: 8026979106547188798}
   - component: {fileID: 181679888125355812}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PachinkoBall
   m_TagString: PachinkoBall
   m_Icon: {fileID: 0}

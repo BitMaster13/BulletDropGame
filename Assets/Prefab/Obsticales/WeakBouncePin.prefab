@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7185631645146215688}
   - component: {fileID: 8659905167718149560}
   - component: {fileID: 1771751590432641169}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WeakBouncePin
   m_TagString: Untagged
   m_Icon: {fileID: 0}

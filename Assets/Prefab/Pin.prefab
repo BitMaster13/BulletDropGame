@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4690090993035842179}
   - component: {fileID: 3690845518619221362}
   - component: {fileID: 5737787216225175919}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pin
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1175560997766082856}
   - component: {fileID: 3981335156402975852}
   - component: {fileID: 188240378355584298}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TriangleRuneSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

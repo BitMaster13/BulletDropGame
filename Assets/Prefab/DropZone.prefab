@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7166702092293878132}
   - component: {fileID: 5751098065099648343}
   - component: {fileID: 8962277065287650152}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DropZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,4 +148,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pachinkoBallPrefab: {fileID: 2179300653329604559, guid: 8779969b7de28804f9b69f9931ee86ed, type: 3}
-  clickAreaCollider: {fileID: 5751098065099648343}
